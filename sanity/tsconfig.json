@@ -13,7 +13,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "./src", // Set the base URL to your source directory (adjust accordingly)
+    "paths": {
+      "@/*": ["*"] // Set the path mapping for the "@" prefix
+    }
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
