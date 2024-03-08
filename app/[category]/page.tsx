@@ -21,18 +21,18 @@ async function getData(cateogry: string) {
 export const dynamic = "force-dynamic";
 
 export default async function CategoryPage({
-  searchParams,
+  params,
 }: {
-  searchParams: { category: string };
+  params: { category: string };
 }) {
-  const data: simplifiedProduct[] = await getData(searchParams.category);
+  const data: simplifiedProduct[] = await getData(params.category);
 
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Products for {searchParams.category}
+            Our Products for {params.category}
           </h2>
         </div>
 
