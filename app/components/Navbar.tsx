@@ -8,9 +8,9 @@ import { useShoppingCart } from "use-shopping-cart";
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "Men", href: "/Men" },
-  { name: "Women", href: "/Women" },
-  { name: "Teens", href: "/Teens" },
+  { name: "Gift", href: "/Gift" },
+  { name: "Garden", href: "/Garden" },
+  { name: "House", href: "/House" },
 ];
 
 export default function Navbar() {
@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
         <Link href="/">
           <h1 className="text-2xl md:text-4xl font-bold">
-            Ve3z<span className="text-primary">Commerce</span>
+            Floral<span className="text-primary">Commerce</span>
           </h1>
         </Link>
 

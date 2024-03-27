@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 async function getData() {
-  const query = `*[_type == "product"][0...4] | order(_createdAt desc) {
+  const query = `*[_type == "product"] | order(_updatedAt desc)[5...17] {
         _id,
           price,
         name,
@@ -19,7 +19,7 @@ async function getData() {
   return data;
 }
 
-export default async function Newest() {
+export default async function All() {
   const data: simplifiedProduct[] = await getData();
 
   return (
@@ -27,7 +27,7 @@ export default async function Newest() {
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Newest products
+            More products
           </h2>
         </div>
 

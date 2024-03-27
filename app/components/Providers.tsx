@@ -9,8 +9,8 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       mode="payment"
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
-      successUrl="https://localhost:3000/stripe/success"
-      cancelUrl="https://localhost:3000/stripe/error"
+      successUrl="https://next-js-ecommerce-wheat.vercel.app//stripe/success"
+      cancelUrl="https://next-js-ecommerce-wheat.vercel.app//stripe/error"
       currency="ZAR"
       billingAddressCollection={false}
       shouldPersist={true}
